@@ -1,114 +1,12 @@
-## Introduction
-
-This assignment uses data from
-the <a href="http://archive.ics.uci.edu/ml/">UC Irvine Machine
-Learning Repository</a>, a popular repository for machine learning
-datasets. In particular, we will be using the "Individual household
-electric power consumption Data Set" which I have made available on
-the course web site:
-
-
-* <b>Dataset</b>: <a href="https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip">Electric power consumption</a> [20Mb]
-
-* <b>Description</b>: Measurements of electric power consumption in
-one household with a one-minute sampling rate over a period of almost
-4 years. Different electrical quantities and some sub-metering values
-are available.
-
-
-The following descriptions of the 9 variables in the dataset are taken
-from
-the <a href="https://archive.ics.uci.edu/ml/datasets/Individual+household+electric+power+consumption">UCI
-web site</a>:
-
-<ol>
-<li><b>Date</b>: Date in format dd/mm/yyyy </li>
-<li><b>Time</b>: time in format hh:mm:ss </li>
-<li><b>Global_active_power</b>: household global minute-averaged active power (in kilowatt) </li>
-<li><b>Global_reactive_power</b>: household global minute-averaged reactive power (in kilowatt) </li>
-<li><b>Voltage</b>: minute-averaged voltage (in volt) </li>
-<li><b>Global_intensity</b>: household global minute-averaged current intensity (in ampere) </li>
-<li><b>Sub_metering_1</b>: energy sub-metering No. 1 (in watt-hour of active energy). It corresponds to the kitchen, containing mainly a dishwasher, an oven and a microwave (hot plates are not electric but gas powered). </li>
-<li><b>Sub_metering_2</b>: energy sub-metering No. 2 (in watt-hour of active energy). It corresponds to the laundry room, containing a washing-machine, a tumble-drier, a refrigerator and a light. </li>
-<li><b>Sub_metering_3</b>: energy sub-metering No. 3 (in watt-hour of active energy). It corresponds to an electric water-heater and an air-conditioner.</li>
-</ol>
-
-## Loading the data
+<div class="rc-AssignmentInstructions"><h2 class="headline-2-text title">Instructions</h2><div class="introduction"><div class="rc-CML styled"><div><p>This assignment uses data from the&nbsp;<a href="http://archive.ics.uci.edu/ml/" target="_blank" rel="noopener nofollow">UC Irvine Machine Learning Repository</a>, a popular repository for machine learning datasets. In particular, we will be using the “Individual household electric power consumption Data Set” which I have made available on the course web site:</p><ul><li><strong>Dataset</strong>:&nbsp;<a href="https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip" target="_blank" rel="noopener nofollow">Electric power consumption</a>&nbsp;[20Mb]</li><li><strong>Description</strong>: Measurements of electric power consumption in one household with a one-minute sampling rate over a period of almost 4 years. Different electrical quantities and some sub-metering values are available.</li></ul><p>The following descriptions of the 9 variables in the dataset are taken from the&nbsp;<a href="https://archive.ics.uci.edu/ml/datasets/Individual+household+electric+power+consumption" target="_blank" rel="noopener nofollow">UCI web site</a>:</p><ol><li><strong>Date</strong>: Date in format dd/mm/yyyy</li><li><strong>Time</strong>: time in format hh:mm:ss</li><li><strong>Global_active_power</strong>: household global minute-averaged active power (in kilowatt)</li><li><strong>Global_reactive_power</strong>: household global minute-averaged reactive power (in kilowatt)</li><li><strong>Voltage</strong>: minute-averaged voltage (in volt)</li><li><strong>Global_intensity</strong>: household global minute-averaged current intensity (in ampere)</li><li><strong>Sub_metering_1</strong>: energy sub-metering No. 1 (in watt-hour of active energy). It corresponds to the kitchen, containing mainly a dishwasher, an oven and a microwave (hot plates are not electric but gas powered).</li><li><strong>Sub_metering_2</strong>: energy sub-metering No. 2 (in watt-hour of active energy). It corresponds to the laundry room, containing a washing-machine, a tumble-drier, a refrigerator and a light.</li><li><strong>Sub_metering_3</strong>: energy sub-metering No. 3 (in watt-hour of active energy). It corresponds to an electric water-heater and an air-conditioner.</li></ol></div></div></div><div class="rc-AssignmentInstructionSection"><div class="title-container bgcolor-primary-light"><span class="body-2-text">Review criteria</span><span class="rc-MoreOrLess body-2-text color-hint-text"><button class="nostyle button-link"><!-- react-text: 154 -->less<!-- /react-text --><!-- react-text: 155 -->&nbsp;<!-- /react-text --><i class="cif-chevron-up toggle-arrow"></i></button></span></div><div class="instructions-content-container"><div class="rc-CML styled"><div><p>
 
 
 
 
 
-When loading the dataset into R, please consider the following:
-
-* The dataset has 2,075,259 rows and 9 columns. First
-calculate a rough estimate of how much memory the dataset will require
-in memory before reading into R. Make sure your computer has enough
-memory (most modern computers should be fine).
-
-* We will only be using data from the dates 2007-02-01 and
-2007-02-02. One alternative is to read the data from just those dates
-rather than reading in the entire dataset and subsetting to those
-dates.
-
-* You may find it useful to convert the Date and Time variables to
-Date/Time classes in R using the `strptime()` and `as.Date()`
-functions.
-
-* Note that in this dataset missing values are coded as `?`.
 
 
-## Making Plots
-
-Our overall goal here is simply to examine how household energy usage
-varies over a 2-day period in February, 2007. Your task is to
-reconstruct the following plots below, all of which were constructed
-using the base plotting system.
-
-First you will need to fork and clone the following GitHub repository:
-[https://github.com/rdpeng/ExData_Plotting1](https://github.com/rdpeng/ExData_Plotting1)
 
 
-For each plot you should
 
-* Construct the plot and save it to a PNG file with a width of 480
-pixels and a height of 480 pixels.
-
-* Name each of the plot files as `plot1.png`, `plot2.png`, etc.
-
-* Create a separate R code file (`plot1.R`, `plot2.R`, etc.) that
-constructs the corresponding plot, i.e. code in `plot1.R` constructs
-the `plot1.png` plot. Your code file **should include code for reading
-the data** so that the plot can be fully reproduced. You should also
-include the code that creates the PNG file.
-
-* Add the PNG file and R code file to your git repository
-
-When you are finished with the assignment, push your git repository to
-GitHub so that the GitHub version of your repository is up to
-date. There should be four PNG files and four R code files.
-
-
-The four plots that you will need to construct are shown below. 
-
-
-### Plot 1
-
-
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
-
-
-### Plot 2
-
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
-
-
-### Plot 3
-
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
-
-
-### Plot 4
-
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
-
+<strong>Criteria</strong></p><ol><li>Was a valid GitHub URL containing a git repository submitted?</li><li>Does the GitHub repository contain at least one commit beyond the original fork?</li><li>Please examine the plot files in the GitHub repository. Do the plot files appear to be of the correct graphics file format?</li><li>Does each plot appear correct?</li><li>Does each set of R code appear to create the reference plot?</li></ol><p><strong>Reviewing the Assignments</strong></p><p>Keep in mind this course is about exploratory graphs, understanding the data, and developing strategies. Here's a good quote from a swirl lesson about exploratory graphs: <em>"They help us find patterns in data and understand its properties. They suggest modeling strategies and help to debug analyses. We DON'T use exploratory graphs to communicate results."</em></p><p>The rubrics should always be interpreted in that context.</p><p>As you do your evaluation, please keep an open mind and focus on the positive. The goal is not to deduct points over small deviations from the requirements or for legitimate differences in implementation styles, etc. Look for ways to give points when it's clear that the submitter has given a good faith effort to do the project, and when it's likely that they've succeeded. Most importantly, it's okay if a person did something differently from the way that <em>you</em> did it. The point is not to see if someone managed to match your way of doing things, but to see if someone objectively accomplished the task at hand.</p><p>To that end, keep the following things in mind:</p><p>DO</p><ul><li>Review the source code.</li><li>Keep an open mind and focus on the positive.=/li&gt;</li><li>When in doubt, err on the side of giving too many points, rather than giving too few.</li><li>Ask yourself if a plot might answer a question for the person who created it.</li><li>Remember that not everyone has the same statistical background and knowledge.</li></ul><p>DON'T:</p><ul><li>Deduct just because you disagree with someone's statistical methods.</li><li>Deduct just because you disagree with someone's plotting methods.</li><li>Deduct based on aesthetics.</li></ul></div></div></div></div><div class="rc-AssignmentInstructionSection"><div class="title-container bgcolor-primary-light"><span class="body-2-text">Loading the data</span><span class="rc-MoreOrLess body-2-text color-hint-text"><button class="nostyle button-link"><!-- react-text: 165 -->less<!-- /react-text --><!-- react-text: 166 -->&nbsp;<!-- /react-text --><i class="cif-chevron-up toggle-arrow"></i></button></span></div><div class="instructions-content-container"><div class="rc-CML styled"><div><p>When loading the dataset into R, please consider the following:</p><ul><li>The dataset has 2,075,259 rows and 9 columns. First calculate a rough estimate of how much memory the dataset will require in memory before reading into R. Make sure your computer has enough memory (most modern computers should be fine).</li><li>We will only be using data from the dates 2007-02-01 and 2007-02-02. One alternative is to read the data from just those dates rather than reading in the entire dataset and subsetting to those dates.</li><li>You may find it useful to convert the Date and Time variables to Date/Time classes in R using the <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-1-Frame" role="textbox" aria-readonly="true"><nobr><span class="math" id="MathJax-Span-1"><span style="display: inline-block; position: relative; width: 91px; height: 0px; font-size: 124%;"><span style="position: absolute; clip: rect(30px 17360px 51.8px -9px); top: -45px; left: 0px;"><span class="mrow" id="MathJax-Span-2"><span class="mstyle" id="MathJax-Span-3" style="color: red;"><span class="mrow" id="MathJax-Span-4" style="color: red;"><span class="mtext" id="MathJax-Span-5" style="font-family: MathJax_Typewriter; color: red;">strptime()</span></span></span></span><span style="display: inline-block; width: 0px; height: 45px;"></span></span></span><span style="border-left: 0px solid; display: inline-block; overflow: hidden; width: 0px; height: 17.9px; vertical-align: -4.8px;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-1">\color{red}{\verb|strptime()|}</script> &nbsp;and&nbsp;<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-2-Frame" role="textbox" aria-readonly="true"><nobr><span class="math" id="MathJax-Span-6"><span style="display: inline-block; position: relative; width: 82px; height: 0px; font-size: 124%;"><span style="position: absolute; clip: rect(30px 17360px 49.4px -9px); top: -45px; left: 0px;"><span class="mrow" id="MathJax-Span-7"><span class="mstyle" id="MathJax-Span-8" style="color: red;"><span class="mrow" id="MathJax-Span-9" style="color: red;"><span class="mtext" id="MathJax-Span-10" style="font-family: MathJax_Typewriter; color: red;">as.Date()</span></span></span></span><span style="display: inline-block; width: 0px; height: 45px;"></span></span></span><span style="border-left: 0px solid; display: inline-block; overflow: hidden; width: 0px; height: 15.5px; vertical-align: -2.4px;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-2">\color{red}{\verb|as.Date()|}</script>&nbsp;functions.</li><li>Note that in this dataset missing values are coded as <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-3-Frame" role="textbox" aria-readonly="true"><nobr><span class="math" id="MathJax-Span-11"><span style="display: inline-block; position: relative; width: 9px; height: 0px; font-size: 124%;"><span style="position: absolute; clip: rect(31.3px 17360px 48px -9px); top: -45px; left: 0px;"><span class="mrow" id="MathJax-Span-12"><span class="mstyle" id="MathJax-Span-13" style="color: red;"><span class="mrow" id="MathJax-Span-14" style="color: red;"><span class="mtext" id="MathJax-Span-15" style="font-family: MathJax_Typewriter; color: red;">?</span></span></span></span><span style="display: inline-block; width: 0px; height: 45px;"></span></span></span><span style="border-left: 0px solid; display: inline-block; overflow: hidden; width: 0px; height: 12.7px; vertical-align: -1px;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-3">\color{red}{\verb|?|}</script>.</li></ul></div></div></div></div><div class="rc-AssignmentInstructionSection"><div class="title-container bgcolor-primary-light"><span class="body-2-text">Making Plots</span><span class="rc-MoreOrLess body-2-text color-hint-text"><button class="nostyle button-link"><!-- react-text: 176 -->less<!-- /react-text --><!-- react-text: 177 -->&nbsp;<!-- /react-text --><i class="cif-chevron-up toggle-arrow"></i></button></span></div><div class="instructions-content-container"><div class="rc-CML styled"><div><p>Our overall goal here is simply to examine how household energy usage varies over a 2-day period in February, 2007. Your task is to reconstruct the following plots below, all of which were constructed using the base plotting system.</p><p>First you will need to fork and clone the following GitHub repository:&nbsp;<a href="https://github.com/rdpeng/ExData_Plotting1" target="_blank" rel="noopener nofollow">https://github.com/rdpeng/ExData_Plotting1</a></p><p>For each plot you should</p><ul><li>Construct the plot and save it to a PNG file with a width of 480 pixels and a height of 480 pixels.</li><li>Name each of the plot files as&nbsp;<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-4-Frame" role="textbox" aria-readonly="true"><nobr><span class="math" id="MathJax-Span-16"><span style="display: inline-block; position: relative; width: 82px; height: 0px; font-size: 124%;"><span style="position: absolute; clip: rect(31.2px 17360px 52px -9px); top: -45px; left: 0px;"><span class="mrow" id="MathJax-Span-17"><span class="mstyle" id="MathJax-Span-18" style="color: red;"><span class="mrow" id="MathJax-Span-19" style="color: red;"><span class="mtext" id="MathJax-Span-20" style="font-family: MathJax_Typewriter; color: red;">plot1.png</span></span></span></span><span style="display: inline-block; width: 0px; height: 45px;"></span></span></span><span style="border-left: 0px solid; display: inline-block; overflow: hidden; width: 0px; height: 16.8px; vertical-align: -5px;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-4">\color{red}{\verb|plot1.png|}</script>,&nbsp;<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-5-Frame" role="textbox" aria-readonly="true"><nobr><span class="math" id="MathJax-Span-21"><span style="display: inline-block; position: relative; width: 82px; height: 0px; font-size: 124%;"><span style="position: absolute; clip: rect(31.2px 17360px 52px -9px); top: -45px; left: 0px;"><span class="mrow" id="MathJax-Span-22"><span class="mstyle" id="MathJax-Span-23" style="color: red;"><span class="mrow" id="MathJax-Span-24" style="color: red;"><span class="mtext" id="MathJax-Span-25" style="font-family: MathJax_Typewriter; color: red;">plot2.png</span></span></span></span><span style="display: inline-block; width: 0px; height: 45px;"></span></span></span><span style="border-left: 0px solid; display: inline-block; overflow: hidden; width: 0px; height: 16.8px; vertical-align: -5px;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-5">\color{red}{\verb|plot2.png|}</script>, etc.</li><li>Create a separate R code file (<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-6-Frame" role="textbox" aria-readonly="true"><nobr><span class="math" id="MathJax-Span-26"><span style="display: inline-block; position: relative; width: 64px; height: 0px; font-size: 124%;"><span style="position: absolute; clip: rect(31.2px 17360px 51.8px -9px); top: -45px; left: 0px;"><span class="mrow" id="MathJax-Span-27"><span class="mstyle" id="MathJax-Span-28" style="color: red;"><span class="mrow" id="MathJax-Span-29" style="color: red;"><span class="mtext" id="MathJax-Span-30" style="font-family: MathJax_Typewriter; color: red;">plot1.R</span></span></span></span><span style="display: inline-block; width: 0px; height: 45px;"></span></span></span><span style="border-left: 0px solid; display: inline-block; overflow: hidden; width: 0px; height: 16.6px; vertical-align: -4.8px;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-6">\color{red}{\verb|plot1.R|}</script>,&nbsp;<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-7-Frame" role="textbox" aria-readonly="true"><nobr><span class="math" id="MathJax-Span-31"><span style="display: inline-block; position: relative; width: 64px; height: 0px; font-size: 124%;"><span style="position: absolute; clip: rect(31.2px 17360px 51.8px -9px); top: -45px; left: 0px;"><span class="mrow" id="MathJax-Span-32"><span class="mstyle" id="MathJax-Span-33" style="color: red;"><span class="mrow" id="MathJax-Span-34" style="color: red;"><span class="mtext" id="MathJax-Span-35" style="font-family: MathJax_Typewriter; color: red;">plot2.R</span></span></span></span><span style="display: inline-block; width: 0px; height: 45px;"></span></span></span><span style="border-left: 0px solid; display: inline-block; overflow: hidden; width: 0px; height: 16.6px; vertical-align: -4.8px;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-7">\color{red}{\verb|plot2.R|}</script>, etc.) that constructs the corresponding plot, i.e. code in&nbsp;<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-8-Frame" role="textbox" aria-readonly="true"><nobr><span class="math" id="MathJax-Span-36"><span style="display: inline-block; position: relative; width: 64px; height: 0px; font-size: 124%;"><span style="position: absolute; clip: rect(31.2px 17360px 51.8px -9px); top: -45px; left: 0px;"><span class="mrow" id="MathJax-Span-37"><span class="mstyle" id="MathJax-Span-38" style="color: red;"><span class="mrow" id="MathJax-Span-39" style="color: red;"><span class="mtext" id="MathJax-Span-40" style="font-family: MathJax_Typewriter; color: red;">plot1.R</span></span></span></span><span style="display: inline-block; width: 0px; height: 45px;"></span></span></span><span style="border-left: 0px solid; display: inline-block; overflow: hidden; width: 0px; height: 16.6px; vertical-align: -4.8px;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-8">\color{red}{\verb|plot1.R|}</script>&nbsp;constructs the&nbsp;<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-9-Frame" role="textbox" aria-readonly="true"><nobr><span class="math" id="MathJax-Span-41"><span style="display: inline-block; position: relative; width: 82px; height: 0px; font-size: 124%;"><span style="position: absolute; clip: rect(31.2px 17360px 52px -9px); top: -45px; left: 0px;"><span class="mrow" id="MathJax-Span-42"><span class="mstyle" id="MathJax-Span-43" style="color: red;"><span class="mrow" id="MathJax-Span-44" style="color: red;"><span class="mtext" id="MathJax-Span-45" style="font-family: MathJax_Typewriter; color: red;">plot1.png</span></span></span></span><span style="display: inline-block; width: 0px; height: 45px;"></span></span></span><span style="border-left: 0px solid; display: inline-block; overflow: hidden; width: 0px; height: 16.8px; vertical-align: -5px;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-9">\color{red}{\verb|plot1.png|}</script>&nbsp;plot. Your code file&nbsp;<strong>should include code for reading the data</strong>&nbsp;so that the plot can be fully reproduced. You must also include the code that creates the PNG file.</li><li>Add the PNG file and R code file to the top-level folder of&nbsp;your git repository (no need for separate sub-folders)</li></ul><p>When you are finished with the assignment, push your git repository to GitHub so that the GitHub version of your repository is up to date. There should be four PNG files and four R code files, a total of eight files in the top-level folder of the repo.</p><p>The four plots that you will need to construct are shown below.</p><h3>Plot 1</h3><figure><img src="https://d396qusza40orc.cloudfront.net/exdata/CP1/ExDataCP1Plot1.png" alt=""></figure><h3>Plot 2</h3><figure><img src="https://d396qusza40orc.cloudfront.net/exdata/CP1/ExDataCP1Plot2.png" alt=""></figure><h3>Plot 3</h3><figure><img src="https://d396qusza40orc.cloudfront.net/exdata/CP1/ExDataCP1Plot3.png" alt=""></figure><h3>Plot 4</h3><figure><img src="https://d396qusza40orc.cloudfront.net/exdata/CP1/ExDataCP1Plot4.png" alt=""></figure></div></div></div></div></div>
